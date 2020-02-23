@@ -3,11 +3,11 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4.1
+    context: prova
     steps:
       - checkout
       - run: mkdir -p my_workspace
       - run: echo "Hello World" > my_workspace/echo-output
-        context: prova
       - run: echo $TEST
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
