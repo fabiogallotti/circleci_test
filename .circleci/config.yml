@@ -11,6 +11,8 @@ jobs:
       - run: |
           if [[ $TEST == "prova" ]]; then
               echo "OK";
+          else
+              echo "KO";
           fi
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
