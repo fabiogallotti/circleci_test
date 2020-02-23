@@ -3,12 +3,13 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4.1
+    context: prova
     steps:
       - checkout
       - run: mkdir -p my_workspace
       - run: echo "Hello World" > my_workspace/echo-output
       - run: |
-          if [[ $TEST == "test" ]]; then
+          if [[ $prova == "prova" ]]; then
               echo "OK";
           else
               echo "KO";
