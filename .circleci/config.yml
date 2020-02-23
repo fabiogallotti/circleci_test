@@ -10,7 +10,8 @@ jobs:
       - run: echo "Hello World" > my_workspace/echo-output
       - run: |
           if [[ $TEST == "prova" ]]; then
-              echo "OK"
+              echo "OK";
+          fi
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
           root: my_workspace
